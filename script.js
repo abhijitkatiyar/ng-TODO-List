@@ -22,10 +22,6 @@ app.controller('ctrl', function($scope) {
     $scope.obj = {};
   };
 
-  $scope.disp = function(query) {
-    $scope.str = query;
-  }
-
   $scope.taskRemove = function(x) {
     var i = $scope.arr.indexOf(x);
     if (i >= 0)
