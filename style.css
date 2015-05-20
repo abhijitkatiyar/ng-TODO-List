@@ -1,0 +1,12 @@
+td,
+th {
+  width: 500px;
+}
+button {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+h2 {
+  font-family: "calibri";
+  text-align: center;
+}
