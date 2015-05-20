@@ -28,13 +28,13 @@
 
   <div class="btn-group btn-group-justified" role="group">
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-default" ng-click="disp('')" ng-class="{active: str == ''}">All Tasks</button>
+      <button type="button" class="btn btn-default" ng-click="str=''" ng-class="{active: str == ''}">All Tasks</button>
     </div>
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-default" ng-click="disp('todo')" ng-class="{active: str == 'todo'}">TODO Tasks</button>
+      <button type="button" class="btn btn-default" ng-click="str='todo'" ng-class="{active: str == 'todo'}">TODO Tasks</button>
     </div>
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-default" ng-click="disp('done')" ng-class="{active: str == 'done'}">Completed Tasks</button>
+      <button type="button" class="btn btn-default" ng-click="str='done'" ng-class="{active: str == 'done'}">Completed Tasks</button>
     </div>
   </div>
 
