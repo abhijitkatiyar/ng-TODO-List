@@ -1,12 +1,10 @@
-// Code goes here
 var app = angular.module('myapp', []);
 
 app.controller('ctrl', function($scope) {
 
   $scope.flag1 = true;
   $scope.arr = [];
-  $scope.str = "";
-  $scope.flagtable = false;
+  $scope.str = "todo";
   $scope.id = 0;
   $scope.edit = false;
 
@@ -20,10 +18,8 @@ app.controller('ctrl', function($scope) {
     $scope.obj.time = (new Date()).toLocaleDateString();
     $scope.obj.id = $scope.id;
     $scope.id++;
-    //console.log($scope.obj.time)
     $scope.arr.push($scope.obj);
     $scope.obj = {};
-    $scope.flagtable = true;
   };
 
   $scope.disp = function(query) {
@@ -34,10 +30,6 @@ app.controller('ctrl', function($scope) {
     var i = $scope.arr.indexOf(x);
     if (i >= 0)
       $scope.arr.splice(i, 1);
-  }
-
-  $scope.taskEdit = function(x) {
-
   }
 
 });
