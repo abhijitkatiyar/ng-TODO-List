@@ -47,16 +47,16 @@
         <tr ng-repeat="x in arr| filter:str">
           <td>
             <div ng-hide="edit">{{x.description}}</div>
-            <div ng-show="edit">
+            <div ng-if="edit">
               <input type="text" ng-model="x.description">
             </div>
           </td>
           <td>{{x.time}}</td>
-          <td><span class="glyphicon glyphicon-ok" ng-if="x.status=='todo'" ng-click="x.status='done'" ng-hide="edit"></span>
+          <td><span class="glyphicon glyphicon-ok" ng-click="x.status='done'" ng-hide="edit || !(x.status=='todo')"></span>
           </td>
           <td><span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="taskRemove(x)" ng-hide="edit"></span>
           </td>
-          <td><span class="glyphicon glyphicon-edit" ng-if="x.status=='todo'" aria-hidden="true" ng-click="edit=true" ng-hide="edit"></span>
+          <td><span class="glyphicon glyphicon-edit" aria-hidden="true" ng-click="edit=true" ng-hide="edit || !(x.status=='todo')"></span>
             <span class="glyphicon glyphicon-check" aria-hidden="true" ng-click="edit=false" ng-show="edit"></span>
           </td>
 
