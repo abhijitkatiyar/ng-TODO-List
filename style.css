@@ -1,5 +1,4 @@
-td,
-th {
+td,th {
   width: 500px;
 }
 button {
@@ -7,6 +6,8 @@ button {
   margin-top: 20px;
 }
 h2 {
-  font-family: "calibri";
   text-align: center;
+}
+.f{
+  font-family:;"Trebuchet MS";
 }
